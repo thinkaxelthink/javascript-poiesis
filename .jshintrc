@@ -65,10 +65,7 @@
   "passfail"      : false,
   "white"         : false,
   "globals"       : {
-    "$w": false,
     "_": false,
-    "Hammer": false,
-    "FastClick": false,
     "jasmine": false,
     "describe": false,
     "it": false,
@@ -78,8 +75,6 @@
     "spyOn": false,
     "waitsFor": false,
     "waits": false,
-    "runs": false,
-    "fastdom": false,
-    "googletag": false
+    "runs": false
   }
 }
