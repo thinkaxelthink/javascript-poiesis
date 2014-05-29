@@ -1,13 +1,16 @@
-function triangular(n) {
+/*
+  function triangular(n) {
 
-  var a = [0];
+    var a = [0];
 
-  for (var i = 1; i <= n; i++) {
+    for (var i = 1; i <= n; i++) {
 
-    if (!a[i]) {
-      a[i] = a[i-1] + i;
+      if (!a[i]) {
+        a[i] = a[i-1] + i;
+      }
     }
+
+    return a[i-1];
   }
 
-  return a[i-1];
-}
+*/

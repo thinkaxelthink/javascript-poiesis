@@ -1,33 +1,29 @@
 /*global module:false*/
 module.exports = function(grunt) {
+  
+  var jshintrc = grunt.file.readJSON('.jshintrc'),
+      _ = require("underscore");
 
   // Project configuration.
   grunt.initConfig({
     // Task configuration.
     jshint: {
-      options: {
-        curly: true,
-        eqeqeq: true,
-        immed: true,
-        latedef: true,
-        newcap: true,
-        noarg: true,
-        sub: true,
-        undef: true,
-        unused: true,
-        boss: true,
-        eqnull: true,
-        browser: true,
-        globals: {
-          jQuery: true
-        }
+      app: ['js/**/*.js'],
+      configuration: {
+        files: {
+          src: ['Gruntfile.js', 'karma.conf.js']
+        },
+        options: {}
       },
-      gruntfile: {
-        src: 'Gruntfile.js'
+      specs: {
+        files: {
+          src: 'spec/**/*.js',
+        },
+        options: _.extend(jshintrc, {
+          onevar: false
+        })
       },
-      lib_test: {
-        src: ['lib/**/*.js', 'test/**/*.js']
-      }
+      options: jshintrc
     },
     karma: {
       options: {

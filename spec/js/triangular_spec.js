@@ -28,7 +28,7 @@ describe('triangular()', function(){
 
         for (var i = 0; i < this.range.length; i++) {
 
-          console.log('The value under the ' + this.range[i] + ' position is ' + this.results[i]);
+          //console.log('The value under the ' + this.range[i] + ' position is ' + this.results[i]);
 
           expect(triangular(this.range[i])).toEqual(this.results[i]);
         }
